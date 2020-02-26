@@ -1,12 +1,15 @@
-package org.iesalandalus.programacion.tutorias.mvc.modelo.negocio;
+package org.iesalandalus.programacion.tutorias.mvc.modelo.negocio.memoria;
 
 import javax.naming.OperationNotSupportedException;
+
 import org.iesalandalus.programacion.tutorias.mvc.modelo.dominio.Alumno;
+import org.iesalandalus.programacion.tutorias.mvc.modelo.negocio.IAlumnos;
+
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
-public class Alumnos {
+public class Alumnos implements IAlumnos {
 	private List<Alumno> coleccionAlumnos;
 
 	public Alumnos() {
