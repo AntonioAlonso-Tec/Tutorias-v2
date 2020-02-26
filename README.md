@@ -1,6 +1,7 @@
 # Tarea: Tutorías IES Al-Ándalus
 ## Profesor: José Ramón Jiménez Reyes
-## Alumno:
+## Alumno: Antonio Enrique Alonso Hernández
+## El repositorio de este proyecto es https://github.com/AntonioAlonso-Tec/Tutorias-v2
 
 Desde el IES Al-Ándalus ya nos han comentado que les gustaría que los datos fuesen persistentes en ficheros.
 
