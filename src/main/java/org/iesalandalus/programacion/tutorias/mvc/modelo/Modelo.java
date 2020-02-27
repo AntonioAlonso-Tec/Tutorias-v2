@@ -6,30 +6,21 @@ import java.util.List;
 import javax.naming.OperationNotSupportedException;
 
 import org.iesalandalus.programacion.tutorias.mvc.modelo.dominio.*;
-import org.iesalandalus.programacion.tutorias.mvc.modelo.negocio.memoria.Alumnos;
-import org.iesalandalus.programacion.tutorias.mvc.modelo.negocio.memoria.Citas;
-import org.iesalandalus.programacion.tutorias.mvc.modelo.negocio.memoria.Profesores;
-import org.iesalandalus.programacion.tutorias.mvc.modelo.negocio.memoria.Sesiones;
-import org.iesalandalus.programacion.tutorias.mvc.modelo.negocio.memoria.Tutorias;
+import org.iesalandalus.programacion.tutorias.mvc.modelo.negocio.*;
 
 public class Modelo  implements IModelo{
-	Profesores profesores;
-	Alumnos alumnos;
-	Tutorias tutorias;
-	Sesiones sesiones;
-	Citas citas;
+	private IProfesores profesores;
+	private IAlumnos alumnos;
+	private ITutorias tutorias;
+	private ISesiones sesiones;
+	private ICitas citas;
 
-	public Modelo(IFuenteDatos fuentedatos) {
-		//alumnos = new Alumnos();
-		fuentedatos.crearAlumnos();
-		//profesores = new Profesores();
-		fuentedatos.crearProfesores();
-		//tutorias = new Tutorias();
-		fuentedatos.crearTutorias();
-		//sesiones = new Sesiones();
-		fuentedatos.crearSesiones();
-		//citas = new Citas();
-		fuentedatos.crearCitas();
+	public Modelo(IFuenteDatos fuenteDatos) {
+		alumnos=fuenteDatos.crearAlumnos();
+		profesores=fuenteDatos.crearProfesores();
+		tutorias=fuenteDatos.crearTutorias();
+		sesiones=fuenteDatos.crearSesiones();
+		citas=fuenteDatos.crearCitas();
 	}
 
 	public void insertar(Alumno alumno) throws OperationNotSupportedException {
