@@ -2,24 +2,34 @@ package org.iesalandalus.programacion.tutorias.mvc.modelo;
 
 import java.util.List;
 
+
 import javax.naming.OperationNotSupportedException;
 
 import org.iesalandalus.programacion.tutorias.mvc.modelo.dominio.*;
-import org.iesalandalus.programacion.tutorias.mvc.modelo.negocio.*;
+import org.iesalandalus.programacion.tutorias.mvc.modelo.negocio.memoria.Alumnos;
+import org.iesalandalus.programacion.tutorias.mvc.modelo.negocio.memoria.Citas;
+import org.iesalandalus.programacion.tutorias.mvc.modelo.negocio.memoria.Profesores;
+import org.iesalandalus.programacion.tutorias.mvc.modelo.negocio.memoria.Sesiones;
+import org.iesalandalus.programacion.tutorias.mvc.modelo.negocio.memoria.Tutorias;
 
-public class Modelo {
+public class Modelo  implements IModelo{
 	Profesores profesores;
 	Alumnos alumnos;
 	Tutorias tutorias;
 	Sesiones sesiones;
 	Citas citas;
 
-	public Modelo() {
-		alumnos = new Alumnos();
-		profesores = new Profesores();
-		tutorias = new Tutorias();
-		sesiones = new Sesiones();
-		citas = new Citas();
+	public Modelo(IFuenteDatos fuentedatos) {
+		//alumnos = new Alumnos();
+		fuentedatos.crearAlumnos();
+		//profesores = new Profesores();
+		fuentedatos.crearProfesores();
+		//tutorias = new Tutorias();
+		fuentedatos.crearTutorias();
+		//sesiones = new Sesiones();
+		fuentedatos.crearSesiones();
+		//citas = new Citas();
+		fuentedatos.crearCitas();
 	}
 
 	public void insertar(Alumno alumno) throws OperationNotSupportedException {
