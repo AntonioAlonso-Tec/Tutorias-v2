@@ -127,7 +127,7 @@ public enum Opcion {
 		}
 	};
 
-	private static Vista vista;
+	private static VistaTexto vista;
 	private String texto;
 
 	private Opcion(String texto) {
@@ -136,7 +136,7 @@ public enum Opcion {
 
 	public abstract void ejecutar();
 
-	protected static void setVista(Vista vista) {
+	protected static void setVista(VistaTexto vista) {
 		Opcion.vista = vista;
 	}
 
