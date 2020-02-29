@@ -1,4 +1,4 @@
-package org.iesalandalus.programacion.tutorias.mvc.vista;
+package org.iesalandalus.programacion.tutorias.mvc.vista.texto;
 
 import java.util.List;
 
@@ -6,11 +6,12 @@ import javax.naming.OperationNotSupportedException;
 
 import org.iesalandalus.programacion.tutorias.mvc.controlador.Controlador;
 import org.iesalandalus.programacion.tutorias.mvc.modelo.dominio.*;
+import org.iesalandalus.programacion.tutorias.mvc.vista.IVista;
 
-public class Vista {
+public class VistaTexto implements IVista {
 	private Controlador controlador;
 
-	public Vista() {
+	public VistaTexto() {
 		Opcion.setVista(this);
 	}
 

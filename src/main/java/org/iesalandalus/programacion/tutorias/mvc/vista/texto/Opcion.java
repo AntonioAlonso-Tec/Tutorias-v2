@@ -1,4 +1,4 @@
-package org.iesalandalus.programacion.tutorias.mvc.vista;
+package org.iesalandalus.programacion.tutorias.mvc.vista.texto;
 
 public enum Opcion {
 	INSERTAR_ALUMNO("Insertar Alumno") {
