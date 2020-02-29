@@ -2,17 +2,18 @@ package org.iesalandalus.programacion.tutorias.mvc.controlador;
 
 import java.util.List;
 
+
 import javax.naming.OperationNotSupportedException;
 
-import org.iesalandalus.programacion.tutorias.mvc.modelo.Modelo;
+import org.iesalandalus.programacion.tutorias.mvc.modelo.IModelo;
 import org.iesalandalus.programacion.tutorias.mvc.modelo.dominio.*;
-import org.iesalandalus.programacion.tutorias.mvc.vista.Vista;
+import org.iesalandalus.programacion.tutorias.mvc.vista.IVista;
 
-public class Controlador {
-	private Vista vista;
-	private Modelo modelo;
+public class Controlador implements IControlador {
+	private IVista vista;
+	private IModelo modelo;
 
-	public Controlador(Vista vista, Modelo modelo) {
+	public Controlador(IVista vista, IModelo modelo) {
 		if (modelo == null) {
 			throw new NullPointerException("ERROR: El modelo no puede ser nulo");
 		}
